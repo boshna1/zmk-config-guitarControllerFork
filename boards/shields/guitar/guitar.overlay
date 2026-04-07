@@ -43,6 +43,5 @@ default_transform: matrix_transform0 {
 / {
     chosen {
         zmk,physical-layout = &physical_layout0;
-        // The transform is automatically taken from physical_layout0.transform
     };
 };
