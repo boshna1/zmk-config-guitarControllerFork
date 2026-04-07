@@ -1,24 +1,29 @@
-#include <behavors.dtsi>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
-/{
-	keymap{
-		compatible = "zmk,keymap";
+/ {
+    keymap {
+        compatible = "zmk,keymap";
 
-		default_layer {
-			bindings = <
-				&kp Q //Green
-				&kp W //Red
-				&kp E //Yellow
-				&kp R //Blue
-				&kp T //Orange
-				&kp UP //Strum up
-				&kp DOWN //Strum down
-				&kp O //Start
-				&kp P //Select
-			>;
-		};
-	};
-};
-			
+        default_layer { // Layer 0
+            // --------------------------
+            // | [1]   [W] [Z]      [2] |
+            // |     [A] [D] [X]        |
+            // | [3]   [S] [C] [STUDIO] |
+            // --------------------------
+            bindings = <
+                &kp NUMBER_2
+                &studio_unlock
+                &kp X
+                &kp Z
+                &kp D   
+                &kp S    
+                &kp C
+                &kp NUMBER_3           
+                &kp A
+                &kp W        
+                &kp NUMBER_1
+            >;
+        };
+    };
+ };
