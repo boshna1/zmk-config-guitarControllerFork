@@ -17,8 +17,8 @@
 				&kp DOWN //Strum down
 				&kp O //Start
 				&kp P //Select
-			>;
-		};
-	};
+            >;
+        };
+    };
 };
 			
