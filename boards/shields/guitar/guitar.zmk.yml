@@ -6,3 +6,4 @@ url: https://github.com/boshna1/zmk-config-guitarControllerFork
 requires: [xiao_ble]
 features:
   - keys
+  - studio
