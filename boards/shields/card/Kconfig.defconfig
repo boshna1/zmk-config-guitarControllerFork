@@ -1,7 +1,7 @@
-if SHIELD_CARD
+if SHIELD_GUITAR
 
 config ZMK_KEYBOARD_NAME
-    default "Tues CARD"
+    default "guitar"
 endif
 CONFIG_ZMK_STUDIO=y
 CONFIG_ZMK_KSCAN_DIRECT_POLLING=y
