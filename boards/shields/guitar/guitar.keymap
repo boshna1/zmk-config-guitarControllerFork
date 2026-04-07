@@ -8,7 +8,6 @@
 
 		default_layer {
 			bindings = <
-				&studio_unlock
 				&kp Q //Green
 				&kp W //Red
 				&kp E //Yellow
@@ -17,7 +16,7 @@
 				&kp UP //Strum up
 				&kp DOWN //Strum down
 				&kp O //Start
-				&kp P //Select
+				&mt &kp P &studio_unlock
 			>;
 		};
 	};
