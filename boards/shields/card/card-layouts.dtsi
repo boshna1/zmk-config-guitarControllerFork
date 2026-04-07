@@ -1,22 +1,25 @@
+#include <physical_layouts.dtsi>
+
 / {
-	chosen {
-		zmk,kscan = &default_kscan;
-	};
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Tues CARD";
 
-	default_kscan: kscan {
-		compatible = "zmk,kscan-gpio-direct";
-		label = "default_kscan";
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
 
-		input-gpios = 
-			<&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	};
-
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100  475    0       0     0     0>
+            , <&key_physical_attrs 100 100  475  200       0     0     0>
+            , <&key_physical_attrs 100 100  375   50    4500   375   125>
+            , <&key_physical_attrs 100 100  275   50    4500   375   125>
+            , <&key_physical_attrs 100 100  225   25    4500   200   125>
+            , <&key_physical_attrs 100 100  225  125    4500   200   125>
+            , <&key_physical_attrs 100 100  325   25    4500   200   125>
+            , <&key_physical_attrs 100 100    0  200       0     0     0>
+            , <&key_physical_attrs 100 100  125  125    4500   200   125>
+            , <&key_physical_attrs 100 100  125   25    4500   200   125>
+            , <&key_physical_attrs 100 100    0    0       0     0     0>
+            ;
+    };
 };
