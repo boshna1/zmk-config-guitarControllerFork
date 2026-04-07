@@ -1,4 +1,4 @@
-if SHIELD_CARD
+if SHIELD_GUITAR
 
 config ZMK_KEYBOARD_NAME
     default "guitar"
