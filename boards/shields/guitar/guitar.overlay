@@ -8,15 +8,15 @@
         wakeup-source;
 
         input-gpios = <
-            &xiao_d6 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d5 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d4 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d3 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d2 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d7 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d8 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d9 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            &xiao_d10 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio0 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio1 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
         >;
     };
 
