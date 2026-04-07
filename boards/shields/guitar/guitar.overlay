@@ -28,6 +28,7 @@
         compatible = "zmk,matrix-transform";
         columns = <9>; // Length of the "col-gpios" array
         rows = <1>; // Length of the "row-gpios" array
+		kscan <&kscan0>;
         map = <
         
         RC(0,1) // Green
