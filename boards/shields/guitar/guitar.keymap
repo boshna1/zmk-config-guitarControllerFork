@@ -16,9 +16,13 @@
 				&kp UP //Strum up
 				&kp DOWN //Strum down
 				&kp O //Start
-				&mt &kp P &studio_unlock
-			>;
-		};
-	};
+				&lt 1 &kp P   // Tap = P, Hold = Layer 1
+            >;
+        };
+    layer1 {
+        bindings = <
+            &studio_unlock  // press while holding &lt key
+        >;
+    };
 };
 			
