@@ -1,50 +1,36 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "guitar-layouts.dtsi"
 
-/ {
+/
+{
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
 
         input-gpios = <
-            &gpio0 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)  
-            &gpio0 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
-            &gpio0 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
-            &gpio0 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
-            &gpio0 3  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)  
-            &gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)  
-            &gpio0 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
-            &gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)  
-            &gpio0 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)  
+            &xiao_d6 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d5 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d4 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d3 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d2 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d7 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d8 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d9 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d10 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
         >;
     };
-};
-&xiao_serial { 
-    status = "disabled"; 
-};
 
-/ {
+    &xiao_serial {
+        status = "disabled";
+    };
 
     default_transform: matrix_transform0 {
-            compatible = "zmk,matrix-transform";
-            columns = <9>;
-            rows = <1>;
-            map = <
-            RC(0,0) 
-            RC(0,1)
-            RC(0,2) 
-            RC(0,3) 
-            RC(0,4) 
-            RC(0,5) 
-            RC(0,6) 
-            RC(0,7) 
-            RC(0,8) 
-        >;
+        compatible = "zmk,matrix-transform";
+        columns = <9>;
+        rows = <1>;
+        map = <RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6) RC(0,7) RC(0,8)>;
     };
-};
 
-
-/ {
     chosen {
         zmk,physical-layout = &physical_layout0;
     };
