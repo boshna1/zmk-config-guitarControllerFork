@@ -8,6 +8,7 @@
 
 		default_layer {
 			bindings = <
+				&studio_unlock
 				&kp Q //Green
 				&kp W //Red
 				&kp E //Yellow
