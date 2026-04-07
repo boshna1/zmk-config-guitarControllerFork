@@ -3,7 +3,7 @@ id: card
 name: guitar
 type: shield
 url: https://github.com/boshna1/zmk-config-guitarControllerFork
-requires: [seeeduino_xiao]
+requires: [xiao_ble]
 features:
   - keys
   - studio
