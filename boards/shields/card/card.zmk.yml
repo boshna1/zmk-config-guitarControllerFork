@@ -1,8 +1,8 @@
 file_format: "1"
 id: card
-name: TuesCard
+name: guitar
 type: shield
-url: https://github.com/tuesdesign/card/
+url: https://github.com/boshna1/zmk-config-guitarControllerFork
 requires: [seeeduino_xiao_ble]
 features:
   - keys
