@@ -22,4 +22,4 @@ include:
   - board: xiao_ble
     shield: guitar
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DZMK_BOARD_VARIANT=xiao_ble//zmk
+    cmake-args: -DCONFIG_ZMK_STUDIO=n -DZMK_BOARD_VARIANT=xiao_ble//zmk
