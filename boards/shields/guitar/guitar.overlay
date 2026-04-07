@@ -35,7 +35,6 @@
     };
 };
 
-/ Disable default serial if needed
 &xiao_serial {
     status = "disabled";
 };
