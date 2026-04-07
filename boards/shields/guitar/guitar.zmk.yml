@@ -1,5 +1,5 @@
 file_format: "1"
-id: guitar
+id: card
 name: guitar
 type: shield
 url: https://github.com/boshna1/zmk-config-guitarControllerFork
