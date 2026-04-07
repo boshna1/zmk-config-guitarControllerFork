@@ -6,49 +6,36 @@
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
 
-        input-gpios
-            = <&gpio0 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-			<&gpio0 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			;
-
-    };
-};
-
-&xiao_serial { status = "disabled"; };
-
-/ {
-    matrix_transform0: matrix_transform {
-        compatible = "zmk,matrix-transform";
-        columns = <9>; // Length of the "col-gpios" array
-        rows = <1>; // Length of the "row-gpios" array
-		kscan <&kscan0>;
-        map = <
-        
-        RC(0,1)
-        RC(0,2)
-        RC(0,3)
-        RC(0,4)
-        RC(0,5)
-        RC(0,6)
-        RC(0,7)
-        RC(0,8)
-        RC(0,9)
-        
+        input-gpios = <
+            &gpio0 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &gpio0 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
         >;
     };
-};
 
-/ {
+    matrix_transform0: matrix_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <9>;
+        rows = <1>;
+        map = <
+            RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)
+            RC(0,6) RC(0,7) RC(0,8) RC(0,9)
+        >;
+    };
+
     chosen {
         zmk,physical-layout = &physical_layout0;
         zmk,matrix-transform = &matrix_transform0;
-        // Other chosen items
     };
+};
+
+/ Disable default serial if needed
+&xiao_serial {
+    status = "disabled";
 };
